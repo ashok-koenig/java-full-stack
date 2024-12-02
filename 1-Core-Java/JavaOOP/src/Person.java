@@ -1,8 +1,9 @@
+// Base class, Parent class, Super class
 public class Person {
     // Attributes (Fields)
-    String firstName;
-    String lastName;
-    int age;
+    private String firstName;
+    private String lastName;
+    public int age;
 
     // Constructor - Person() {}
     Person(){
@@ -17,7 +18,7 @@ public class Person {
     }
 
     // Method
-    void introduce() {
+    protected void introduce() {
         System.out.println("My name is " + firstName +" " + lastName + " and age is "+ age);
     }
 
@@ -30,5 +31,7 @@ public class Person {
         baby.lastName = "Smith";
         baby.age = 1;
         baby.introduce();
+        john.age++;
+        john.introduce();
     }
 }
