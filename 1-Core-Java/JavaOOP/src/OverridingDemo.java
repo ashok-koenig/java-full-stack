@@ -3,12 +3,21 @@ class Animal{
     void sound(){
         System.out.println("Default sound");
     }
+
+    //Overloading
+    void sound(String defaultSound){
+        System.out.println(defaultSound);
+    }
 }
 
 class Cat extends Animal{
     // Parent class method sound() is overriding in the cat class.
     void sound(){
         System.out.println("Cat meows");
+    }
+    //Overloading & Overriding
+    void sound(String catSound){
+        System.out.println(catSound);
     }
 }
 
