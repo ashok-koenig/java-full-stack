@@ -6,7 +6,7 @@ class MyThread extends Thread{
         System.out.println("MyThread is running.");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
-        System.out.println("Name"+ name);
+        System.out.println("Name "+ name);
     }
 }
 
