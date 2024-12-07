@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page of the app</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Products App</h2>
+        <a href="/products/new" class="btn btn-primary mb-3">Add Product</a>
+        <table class="table table-borderred">
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+            <tr th:each="product: ${products}">
+                <td th:text="${product.id}"></td>
+                <td th:text="${product.title}"></td>
+                <td th:text="${product.category}"></td>
+                <td th:text="${product.price}"></td>
+                <td>
+                    <a th:href="@{'/products/edit/' + ${product.id}}" class="btn btn-warning">Edit</a>
+                    <a th:href="@{'/products/delete/' + ${product.id}}" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

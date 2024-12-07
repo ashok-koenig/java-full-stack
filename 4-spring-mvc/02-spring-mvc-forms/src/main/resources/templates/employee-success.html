@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page of the app</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1>Employee Registration details</h1>
+    <h3>Name: <span th:text="${employee.name}"></span></h3>
+    <h3>Email: <span th:text="${employee.email}"></span></h3>
+    <h3>Department: <span th:text="${employee.department}"></span></h3>
+    <h3>Joining Date: <span th:text="${employee.joiningDate}"></span></h3>
+    <h3>Address: <span th:text="${employee.address.city}"></span>, <span th:text="${employee.address.state}"></span></h3>
+</div>
+
+</body>
+</html>
